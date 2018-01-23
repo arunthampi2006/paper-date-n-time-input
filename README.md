@@ -3,14 +3,14 @@
 paper-date-picker-item [![Bower version](https://badge.fury.io/bo/paper-date-picker-item.svg)](http://badge.fury.io/bo/paper-date-picker-item) [![Travis state](https://travis-ci.org/Collaborne/paper-date-picker-item.svg?branch=master)](https://travis-ci.org/Collaborne/paper-date-picker-item) [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/Collaborne/paper-date-picker-item)
 =========
 
-`paper-date-picker-item` provides a Material Design item that shows a date and opens a date picker dialog on tap. The web component is built with [Polymer 1.x](https://www.polymer-project.org).
+`paper-date-time-input` provides a Material Design item that shows a date and opens a date picker dialog on tap. The web component is built with [Polymer 1.x](https://www.polymer-project.org).
 
 This component builds on the components [paper-date-picker](https://github.com/bendavis78/paper-date-picker) and [paper-time-picker](https://github.com/bendavis78/paper-time-picker)  by [Ben Davis](https://github.com/bendavis78).
 
 
 To use the elements:
 
-`bower install paper-date-picker-item`
+`bower install paper-date-n-time-input`
 
 <!--
 ```
@@ -32,25 +32,27 @@ To use the elements:
 ```
 -->
 ```html
-<paper-datetime-picker-item
-    icon="icons:today"
-    placeholder="Add date and time"
-    date-format="Do, MMMM, YYYY">
-</paper-datetime-picker-item>
+<paper-date-time-input
+  icon="icons:today"
+  placeholder="Add date and time, custom format"
+  date-format="DD/MM/YYYY"
+  time-format="h:mm:ss a"
+  locale="es">
+</paper-date-time-input>
 ```
 
 ## i18n Support
 
-`paper-date-picker-item` uses [Moment.js](http://momentjs.com), and so supports all locales that Moment.js supports. But,
+`paper-date-time-input` uses [Moment.js](http://momentjs.com), and so supports all locales that Moment.js supports. But,
 the component does not reference any specific locale, so when you want to use it with a locale other than `en` you must
 load the locales explicitly.
 
 ~~~~
-<link rel="import" href="bower_components/paper-date-picker-item/paper-date-picker-item.html">
+<link rel="import" href="bower_components/paper-date-n-time-input/paper-date-time-input.html">
 <script src="bower_components/moment/min/locales.js"></script>
 ~~~~
 
-The `paper-date-picker-item` components all provide a `locale` property to set the locale used by the component.
+The `paper-date-time-input` components all provide a `locale` property to set the locale used by the component.
 
 ## License
 
@@ -69,4 +71,3 @@ The `paper-date-picker-item` components all provide a `locale` property to set t
     WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     License for the specific language governing permissions and limitations under
     the License.
-
